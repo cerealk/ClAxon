@@ -1,0 +1,38 @@
+<idea-plugin version="2">
+    <id>org.xaos.intellij.axon.plugin</id>
+    <name>clAxon¶¶¶</name>
+    <version>${project.version}</version>
+    <vendor email="intellijplugin@axonframework.org" url="http://www.axonframework.org/">Axon Framework</vendor>
+
+    <description>
+        This plugin helps to navigate from and to the axon framework event handler annotations. Axon Framework helps
+        build scalable, extensible and maintainable applications by supporting developers apply the Command Query
+        Responsibility Segregation (CQRS) architectural pattern.
+        Please report issues at http://issues.axonframework.org
+    </description>
+
+    <change-notes>
+        <![CDATA[
+    version 0.0.0.1 - initial version of idea plugin for axon framework
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="201.6668.121"/>
+
+    <application-components/>
+
+    <project-components/>
+
+    <actions>
+        <action id="org.xaos.intellij.axon.plugin.PopupAction" class="org.xaos.intellij.axon.plugin.PopupAction"
+                text="Pop Action" description="An action just to learn how to use it :D">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="ClAxon" icon="/icons/axon_eventsource.png" anchor="left"
+                    factoryClass="org.xaos.intellij.axon.plugin.toolwindow.EventsWindowFactory"/>
+        <projectService serviceImplementation="org.xaos.intellij.axon.plugin.ClAxonModelRepository"/>
+    </extensions>
+</idea-plugin>
