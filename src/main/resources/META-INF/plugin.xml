@@ -34,5 +34,6 @@
         <toolWindow id="ClAxon" icon="/icons/axon_eventsource.png" anchor="left"
                     factoryClass="org.xaos.intellij.axon.plugin.toolwindow.EventsWindowFactory"/>
         <projectService serviceImplementation="org.xaos.intellij.axon.plugin.ClAxonModelRepository"/>
+        <framework.type implementation="org.xaos.intellij.axon.plugin.AxonFramework"/>
     </extensions>
 </idea-plugin>
